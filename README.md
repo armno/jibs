@@ -1,1 +1,1 @@
-    Jibs is a job board
+Jibs is a job board
