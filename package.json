@@ -4,14 +4,15 @@
 	"version": "0.0.1",
 	"private": true,
 	"dependencies": {
-		"express": "3.3.4"
+		"express": "3.3.4",
+		"jade": "0.33.x"
 	},
 	"devDependencies": {
 		"nodemon": "0.7.8"
 	},
 	"scripts": {
 		"start": "nodemon web.js"
-	}
+	},
 	"engines": {
 		"node": "0.10.x",
 		"npm": "1.2.x"

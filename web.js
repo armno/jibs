@@ -1,12 +1,22 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function(request, response) {
-	response.set('Content-Type', 'text/html');
-	response.send('<h1>Jibs is a job board</h1>');
+app.configure(function() {
+	app.set('port', process.env.PORT || 5000);
+	app.set('views', __dirname + '/views');
+	app.set('view engine', 'jade');
 });
 
-var port = process.env.PORT || 5000;
-app.listen(port, function() {
-	console.log('listening on ' + port);
+app.use(app.router);
+
+// render `post new job` form
+app.get('/jobs/new', function(request, response) {
+	response.render('add');
 });
+
+// save new job into the db
+app.post('/jobs/new', function(req, res){
+  res.end('This is happening');
+});
+
+app.listen(app.get('port'));
