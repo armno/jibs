@@ -1,17 +1,12 @@
-doctype 5
-html
-  head
-    title= "Jibs is a job board"
-  body
-    h1 Post new job
-    form(method="post")
-      div
-        label(for="name") Name:
-        input(type="text", name="name")
+extends layout
 
-      div
-        label(for="description") Description:
-        textarea(name="description")
-
-      div
-        input(type="submit", value="Post")
+block content
+  form(method="post")
+    div
+      label(for="name") Name:
+      input(type="text", name="name")
+    div
+      label(for="description") Description:
+      textarea(name="description")
+    div
+      input(type="submit", value="Post")

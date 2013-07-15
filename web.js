@@ -12,7 +12,7 @@ app.configure(function() {
 
 // render `post new job` form
 app.get('/jobs/new', function(request, response) {
-	response.render('add');
+  response.render('add', { title: 'Post a job' });
 });
 
 // save new job into the db
